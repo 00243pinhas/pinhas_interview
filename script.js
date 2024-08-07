@@ -1,3 +1,5 @@
+
+
 function fetchData() {
     fetch('/index.php')
         .then(response => {
@@ -14,8 +16,10 @@ function fetchData() {
         .catch(error => console.error('Error:', error));
 }
 
+
 function populating(datas){
     
+
     const tableOfTask = document.getElementById("bodyTable");
 
     tableOfTask.innerHTML="";
@@ -53,7 +57,6 @@ fetchData();
 
 setInterval(fetchData, 3600000 ); 
 
-
 function searcFuntion (){
     let input = document.getElementById('searchbar').value          
     input = input.toLowerCase();
@@ -85,6 +88,8 @@ function searcFuntion (){
 
 document.getElementById('searchbar').addEventListener('input', searcFuntion);
 
+/// The Modal and image preview 
+
 document.getElementById("openModalBtn").addEventListener("click", function() {
     document.getElementById('imageModal').style.display = 'block';
 });
@@ -109,3 +114,5 @@ document.getElementById("imageInput").addEventListener("change",function(event){
 
 
 })
+
+
