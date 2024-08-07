@@ -84,3 +84,28 @@ function searcFuntion (){
 }
 
 document.getElementById('searchbar').addEventListener('input', searcFuntion);
+
+document.getElementById("openModalBtn").addEventListener("click", function() {
+    document.getElementById('imageModal').style.display = 'block';
+});
+
+document.getElementById("closeModalBtn").addEventListener("click", function() {
+    document.getElementById('imageModal').style.display = 'none';
+});
+
+document.getElementById("imageInput").addEventListener("change",function(event){
+
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e){
+        const imagePreview = document.getElementById("imagePreview");
+        imagePreview.innerHTML = `<img src="${e.target.result}" alt="Selected Image">`;
+    }
+
+        if (file) {
+        reader.readAsDataURL(file);
+    }
+
+
+})
