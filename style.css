@@ -1,0 +1,104 @@
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: rgb(10, 10, 179);
+    color: white;
+    font-size: 2rem;
+}
+
+
+#searchbar {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+    box-sizing: border-box;
+    border: solid 2px;
+}
+
+
+/* Modal styling */
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+   
+}
+
+.openModalBtn{
+    margin: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.close {
+  
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 2rem;
+    
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#imagePreview img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+.search_bar{
+    text-align: center;
+    margin: 2rem;
+}
+
+body h1{
+    text-align: center;
+}
+
+.openeBtn{
+    text-align: center;
+
+}
+
+.openeBtn button{
+    
+    background-color: rgb(10, 10, 190);
+    color: white;
+    padding: 2rem;
+    border-radius: 7px;
+}
