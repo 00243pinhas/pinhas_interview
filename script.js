@@ -50,3 +50,5 @@ function populating(datas){
 }
 
 fetchData();
+
+setInterval(fetchData, 3600000 ); 
