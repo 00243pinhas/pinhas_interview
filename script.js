@@ -52,3 +52,35 @@ function populating(datas){
 fetchData();
 
 setInterval(fetchData, 3600000 ); 
+
+
+function searcFuntion (){
+    let input = document.getElementById('searchbar').value          
+    input = input.toLowerCase();
+ 
+    let rowContainsSearchText ;
+
+    let table = document.getElementById("tasksTable");
+    let rows = table.getElementsByTagName("tr");
+
+    
+    for (let i = 1 ; i < rows.length ; i++){
+        let cell = rows[i].getElementsByTagName('td');
+
+         rowContainsSearchText = false;
+
+        for ( let j = 0 ; j < cell.length; j++){
+
+            if (cell[j].textContent.toLocaleLowerCase().includes(input)){
+                 rowContainsSearchText = true;
+
+            }
+
+        }
+        rows[i].style.display = rowContainsSearchText ? '' : 'none';
+
+
+    }
+}
+
+document.getElementById('searchbar').addEventListener('input', searcFuntion);
