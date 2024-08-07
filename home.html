@@ -16,7 +16,6 @@
         type="text" name="search" 
         placeholder="Search task..">
     </div>
-
     <table id="tasksTable">
         <thead>
             <tr>
@@ -31,6 +30,15 @@
 
     <div class="openeBtn">
         <button id="openModalBtn" class="openModalBtn"> Modal</button>
+    </div>
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <h2>Select an Image</h2>
+            <input type="file" id="imageInput" accept="image/*">
+            <div id="imagePreview"></div>
+
+            <button class="close" id="closeModalBtn">Close</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
